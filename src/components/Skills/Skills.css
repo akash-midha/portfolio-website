@@ -1,0 +1,102 @@
+.skills {
+  padding: 4rem 2rem 5rem;
+  background: linear-gradient(180deg, #1e1629 0%, #0f0a18 100%);
+  color: #fff;
+}
+
+.skills__main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 3rem;
+  letter-spacing: -0.02em;
+}
+
+.skills__main-icon {
+  font-size: 1.75rem;
+}
+
+.skills__divisions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills__division {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.skills__division:hover {
+  border-color: rgba(230, 126, 34, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.skills__division-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e67e22;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid rgba(230, 126, 34, 0.35);
+}
+
+.skills__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+}
+
+.skills__item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  transition: background 0.2s, transform 0.15s, border-color 0.2s;
+}
+
+.skills__item:hover {
+  background: rgba(230, 126, 34, 0.2);
+  border-color: rgba(230, 126, 34, 0.4);
+  transform: translateY(-1px);
+}
+
+.skills__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #e8e6ed;
+  white-space: nowrap;
+}
+
+/* Longer labels (e.g. Mobile, Coursework) can wrap on small screens */
+@media (max-width: 480px) {
+  .skills__label {
+    white-space: normal;
+  }
+}
+
+@media (min-width: 900px) {
+  .skills__divisions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .skills__divisions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

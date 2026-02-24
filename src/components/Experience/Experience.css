@@ -1,0 +1,121 @@
+.experience {
+  padding: 5rem 2rem;
+  background: #f0f0f5;
+}
+
+.experience__timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #1e3a5f;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.experience__item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.experience__item--left {
+  padding-right: calc(50% + 1.5rem);
+  text-align: right;
+}
+
+.experience__item--right {
+  padding-left: calc(50% + 1.5rem);
+  text-align: left;
+}
+
+.experience__item::before {
+  content: '';
+  position: absolute;
+  top: 1.25rem;
+  width: 16px;
+  height: 16px;
+  background: #e67e22;
+  border-radius: 50%;
+  border: 3px solid #1e3a5f;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.experience__item--left::before {
+  left: calc(50% - 8px);
+}
+
+.experience__item--right::before {
+  left: calc(50% - 8px);
+}
+
+.experience__card {
+  background: #e67e22;
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+.experience__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.experience__role {
+  font-size: 0.9rem;
+  margin: 0 0 0.25rem;
+  opacity: 0.95;
+}
+
+.experience__duration {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.experience__back {
+  display: block;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #1e3a5f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.2s;
+}
+
+.experience__back:hover {
+  background: #2a4a6f;
+}
+
+@media (max-width: 700px) {
+  .experience__timeline::before {
+    left: 12px;
+  }
+  .experience__item--left,
+  .experience__item--right {
+    padding-left: 2.5rem;
+    padding-right: 0;
+    text-align: left;
+  }
+  .experience__item::before {
+    left: 4px !important;
+  }
+}
